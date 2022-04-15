@@ -1,1 +1,18 @@
-<p>login works!</p>
+<p>Faça o login para ter acesso à plataforma:</p>
+
+<mat-form-field appearance="fill">
+
+  <mat-label>Input</mat-label>
+  <input matInput placeholder="Usuário">
+
+  <mat-label>Enter your password</mat-label>
+  <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </button>
+
+  <button mat-raised-button  >Login</button>
+
+</mat-form-field>
+
+
