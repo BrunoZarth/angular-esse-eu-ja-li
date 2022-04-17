@@ -13,13 +13,15 @@ import {MatTableModule} from '@angular/material/table';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     LoginComponent,
-    HomeComponent
-  ],
+    HomeComponent,
+      BookComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
