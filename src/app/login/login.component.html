@@ -2,16 +2,17 @@
 
 <mat-form-field appearance="fill">
 
-  <mat-label>Input</mat-label>
-  <input matInput placeholder="Usuário">
-
-  <mat-label>Enter your password</mat-label>
-  <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
+  <mat-label>Fazer login</mat-label>
+  <br>
+  <input matInput placeholder="Usuário" [(ngModel)]="usuario.name">
+<br><br>
+  <mat-label></mat-label>
+  <input matInput placeholder="Senha"  [(ngModel)]="usuario.password" [type]="hide ? 'password' : 'text'">
   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
   </button>
-
-  <button mat-raised-button >Login</button>
+  <br><br>
+  <button mat-raised-button (click)="fazerLogin()">Login</button>
 
 </mat-form-field>
 

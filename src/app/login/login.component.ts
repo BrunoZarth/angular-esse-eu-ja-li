@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Usuario } from './usuario';
+import { AuthService } from './auth.service';
+import { Component, OnInit, Injectable, Inject, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -9,12 +12,19 @@ export class LoginComponent implements OnInit {
 
   hide = true;
 
-  constructor() { }
+  usuario: Usuario = new Usuario();
+
+  constructor(private authService: AuthService) {
+
+   }
 
   ngOnInit(): void {
 
   }
 
+  fazerLogin(){
+    this.authService.fazerLogin(this.usuario);
+  }
 }
 
 
